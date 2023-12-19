@@ -154,7 +154,7 @@
 
         <q-toolbar>
 
-          <q-toolbar-title class="text-subtitle1" style="font-family: Oswald;">
+          <q-toolbar-title class="text-subtitle1 footer-title" style="font-family: Oswald;">
             © CPR 2K23 | ITWM101 | VUE X QUASAR
           </q-toolbar-title>
 
@@ -420,6 +420,7 @@ a{
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.91) 14%, rgba(154, 46, 216, 0.506) 100%);
 }
 
+
 .header-title {
   padding: 10px;
   font-size: 30px;
@@ -428,6 +429,13 @@ a{
       font-size: 20px;
   }
 }
+
+.footer-title{
+  @media (max-width: 600px) {
+      font-size: 13px;
+  }
+}
+
 
 .nasa_logo {
   width: 75px;
@@ -518,8 +526,12 @@ a{
 }
 
 .footer-icons{
+  margin-top: 4px;
   width: 30px;
   filter: invert(100%);
+  @media (max-width: 600px) {
+      width: 23px;
+  }
 }
 
 </style>
