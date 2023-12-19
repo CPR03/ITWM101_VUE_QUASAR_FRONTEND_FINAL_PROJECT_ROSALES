@@ -160,7 +160,7 @@
 
           <div class="footer-icons-container">
 
-            <a href="https://github.com/CPR03/ITWM101_SEMIFINALS_API_ROSALES" target="_blank"><img class="footer-icons" src="../assets/Icons/github-logo_icon.png" alt=""></a>
+            <a href="https://github.com/CPR03/ITWM101_VUE_QUASAR_FRONTEND_FINAL_PROJECT_ROSALES" target="_blank"><img class="footer-icons" src="../assets/Icons/github-logo_icon.png" alt=""></a>
             <img class="footer-icons" id="javaScriptLogo" src="../assets/Icons/javascript_logo_icon.png" alt="">
             <img class="footer-icons" src="../assets/Icons/html_logo_icon.png" alt="">
             <img class="footer-icons" src="../assets/Icons/css3-02_icon.png" alt="">
