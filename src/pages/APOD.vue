@@ -504,8 +504,11 @@ a{
 
 .date-picker-wrapper {
   position: absolute;
-  top: 160px;
+  top: 190px;
   z-index: 999;
+  @media (max-width: 600px) {
+    top: 160px;
+  }
 }
 
 .day-range{
