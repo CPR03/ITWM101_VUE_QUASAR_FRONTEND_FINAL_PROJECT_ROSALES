@@ -5,7 +5,7 @@
       <q-header reveal elevated class="header shadow-4">
         <q-toolbar>
 
-          <q-btn flat @click="drawer = !drawer" round dense icon="menu"></q-btn>
+          <q-btn flat @click="drawer = !drawer" dense icon="menu"></q-btn>
 
           <q-toolbar-title class=" row items-center q-pa-md text-bold header-title">
             <img src="../assets/NASA_logo.svg.png" alt="nasa_logo" class="nasa_logo" />
@@ -59,12 +59,11 @@
               <div class="input-container">
                 <q-input
                   @keyup.enter="triggerDateSearch"
-                  class="custom-outlined-input rounded shadow-3 "
+                  class="rounded shadow-3 "
                   v-model="textDateSearch"
                   outlined
                   filled
                   style="width: 300px;"
-                  :class="{ 'error': textDateSearch.length > 10, 'default' : textDateSearch.length < 9}"
                   color="purple"
                   dark
                   bg-color="black"
@@ -485,16 +484,6 @@ a{
       margin-left: 0px;
       font-size: 35px;
   }
-}
-
-.error{
-  color: rgb(255, 0, 0);
-  background-color: pink;
-}
-
-.default{
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
 }
 
 .search-bar {
