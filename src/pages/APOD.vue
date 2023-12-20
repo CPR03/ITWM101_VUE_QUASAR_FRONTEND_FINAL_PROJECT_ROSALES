@@ -2,6 +2,7 @@
 
     <q-layout view="lHh Lpr lFf" class="all-container">
 
+      <!-- Header -->
       <q-header reveal elevated class="header shadow-4">
         <q-toolbar>
 
@@ -14,6 +15,7 @@
         </q-toolbar>
       </q-header>
 
+      <!-- APOD Menu Drawer -->
       <q-drawer
         v-model="drawer"
         elevated
@@ -29,7 +31,9 @@
 
       <div style="height: 11px; background: linear-gradient(90deg, rgba(0, 0, 0, 0.91) 14%, rgba(154, 46, 216, 0.506) 100%);"></div>
 
+      <!-- APOD Menu Items -->
       <q-list>
+
           <q-item clickable v-close-popup>
             <q-item-section>
               <q-item-label>
@@ -38,6 +42,7 @@
               </q-item-label>
             </q-item-section>
           </q-item>
+
           <q-item clickable v-close-popup>
             <q-item-section>
               <q-item-label>
@@ -46,11 +51,12 @@
               </q-item-label>
             </q-item-section>
           </q-item>
-      </q-list>
 
+      </q-list>
 
       </q-drawer>
 
+      <!-- Website Body -->
       <q-page-container>
 
           <div class="row justify-center search-bar q-gutter-md">
@@ -67,6 +73,7 @@
                   color="purple"
                   dark
                   bg-color="black"
+                  label = "Search Date"
                 >
 
                   <template v-slot:prepend>
@@ -117,6 +124,7 @@
               </div>
           </div>
 
+          <!-- APOD TILE -->
           <div class="body-container row">
             <h1 id="body-title" class="text-bold">{{ getBodyTitle() }}</h1>
           </div>
@@ -134,7 +142,6 @@
                     style="width: 100%; height: 300px; object-fit: cover; color: azure;"
                     class="apod-img"
                     alt="NASA APOD Picture (Not Available)"
-
                   />
 
                 </div>
@@ -149,6 +156,7 @@
 
       </q-page-container>
 
+      <!-- Footer -->
       <q-footer reveal elevated class="footer row" style="padding: 0;">
 
         <q-toolbar>
@@ -171,6 +179,7 @@
       <q-page-container>
         <router-view />
       </q-page-container>
+
     </q-layout>
 
 </template>
@@ -228,6 +237,7 @@ function onSliderChange() {
   });
 }
 
+//Show/Hide Date Picker
 function toggleDatePicker() {
   showDatePicker.value = !showDatePicker.value;
 }
@@ -361,11 +371,15 @@ function getBodyTitle() {
 
 //Format textInput Date
 function onDateChange() {
+
   if (selectedDate.value) {
     textDateSearch.value = formatDate(selectedDate.value);
-  } else {
+  }
+
+  else {
     textDateSearch.value = '';
   }
+
 }
 
 //Run triggerDateSearch by default
@@ -462,7 +476,7 @@ a{
   text-align: justify;
   text-indent: 20px;
   padding: 24px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .body-container{
